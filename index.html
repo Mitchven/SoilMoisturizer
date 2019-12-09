@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Final Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+</head>
+
+<body>
+    <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-10 mb-10">
+
+            <!-- Card -->
+            <p>SOIL MOISTURIZE DETECTOR</p>
+            <div class="card bg-info text-light" style="margin-top: 10%;">
+                <div class="form-group card-body">
+                    <div class="row">
+                        <div class="control-label col-sm-5"><label>TIMESTAMP </label></div>
+                        <input class="border border-secondary col-sm-12" type="text" id="tp" value="">
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="control-label col-sm-5"><label>STATUS</label></div>
+                        <input class="border border-secondary col-sm-12" type="text" id="ss" value="">
+                    </div>
+                </div>
+            </div>
+            <!-- Card -->
+            <br>
+            <br>
+            <div class="row">
+            </div class="col-md-2">
+
+        </div>
+    </div>
+    <center><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">
+            History
+        </button></center>
+
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">History</h5>
+                    <slot>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        <button type="button" id="remove" class="btn btn-danger">Clear</button>
+                    </slot>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th id="ts" scope="col">TIMESTAMP</th>
+                                <th id="ss" scope="col">STATUS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
+<style>
+    body {
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0G2iS-D6_GQv7Zz4qXUHpcaMJsRtcvQtye-LURt7IlmeiyBIL7A&s");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    input {
+        border-radius: 20px;
+    }
+
+    strong {
+        color: aqua;
+    }
+
+    .col-md-10 {
+        padding: 15px;
+        margin-left: 5%;
+        margin-left: 5%;
+        /* background-color: black; */
+    }
+
+
+
+    #sm {
+        font: 300% times bold;
+        text-align: center;
+    }
+
+    #timestamp,
+    #status {
+        font: 150% courier bold;
+        color: white;
+    }
+
+    table {
+        width: 100%;
+        max-width: 100%;
+        border-collapse: collapse;
+        margin-top: 5%;
+        background-color: black;
+    }
+
+    table th,
+    table td {
+        width: 1%;
+        padding: .5rem;
+        vertical-align: top;
+        text-align: center;
+        font: 150% comic bold;
+        color: white;
+    }
+
+    table thead th {
+        vertical-align: bottom;
+    }
+
+    p {
+        font: 300% black bold;
+        text-align: center;
+    }
+</style>
+<script src="/browserMqtt.js"></script>
+<script src="/controller.js"></script>

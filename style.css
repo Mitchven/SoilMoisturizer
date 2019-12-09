@@ -1,0 +1,60 @@
+
+body {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0G2iS-D6_GQv7Zz4qXUHpcaMJsRtcvQtye-LURt7IlmeiyBIL7A&s);
+    background-size: cover;
+}
+#sm {
+    font: 300% times bold;
+    text-align: center;
+}
+#timestamp, #status {
+    font: 150% courier bold;
+    color: white;
+}
+table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-top:5%;
+    background-color:black;
+}
+header {
+    background-color: skyblue;
+}
+table th,
+table td {
+    width: 1%;
+    padding: .5rem;
+    vertical-align: top;
+    text-align: center;
+    font: 150% comic bold;
+}
+table thead th {
+    vertical-align: bottom;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    color: white;
+}
+p {
+    font: 150% black bold;
+    margin-left: 10%;
+}
